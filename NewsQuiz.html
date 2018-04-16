@@ -20,11 +20,20 @@
 
       <div id="question-2" class="form-group">
         <label class="control-label">Is Mark Zuckerberg a human?</label>
-        <select  select id="zucc">
+        <select select id="zucc">
           <option value="answer-1">Yes</option>
           <option value="answer-2">No</option>
         </select>
       </div>
+
+      <div id="question-3" class="form-group">
+    <label class="control-label">How is tall James Comey?</label>
+    <select id="comey">
+      <option value="answer-3">5'7"</option>
+      <option value="answer-4">6'8"</option>
+      <option value="answer-5">4'11"</option>
+    </select>
+    </div>
 
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
@@ -47,6 +56,13 @@
         } else {
           $("#question-2").addClass ('has-error');
     }
+
+    var comey = $('#comey').val();
+      if (comey == 'answer-4') {
+        $("#question-3").addClass ('has-success');
+      } else {
+        $("#question-3").addClass ('has-error');
+  }
 
     });
     </script>
