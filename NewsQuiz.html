@@ -38,11 +38,27 @@
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
+
+      <div class="answers">
+        <input id="show" type="button" value="Show answers" class="btn btn-primary" />
+      </div>
     </div>
 
     <script>
-      $('#grade-it').on('click', function() {
 
+$(document).ready(function() {
+$("button").on('click', function() {
+  $("button").click(function(){
+  $("#form-group").removeClass("has-success");
+  });
+
+  $("button").click(function(){
+  $('#form-group').removeClass("has-error");
+  });
+});
+});
+
+      $('#grade-it').on('click', function() {
         var beyonce = $('#text').val();
         if (beyonce == 'Raini Rodriguez' || beyonce == 'Jay-Z' || beyonce == 'Raini'){
         $("#question-1").addClass ('has-success');
@@ -51,7 +67,7 @@
       }
 
       var markZuc = $('#zucc').val();
-        if (markZuc == 'answer-1') {
+        if (markZuc == 'answer-2') {
           $("#question-2").addClass ('has-success');
         } else {
           $("#question-2").addClass ('has-error');
